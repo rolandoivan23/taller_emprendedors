@@ -1,3 +1,4 @@
+<br />
 <%= form_for(@department) do |f| %>
   <% if @department.errors.any? %>
     <div id="error_explanation">
@@ -20,6 +21,6 @@
     <%= f.text_field :descripcion %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit params[:action] == "edit" ? "Actualizar Departamento" : "Crear Departamento" %>
   </div>
 <% end %>
