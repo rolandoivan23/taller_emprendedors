@@ -1,4 +1,6 @@
 Proyecto::Application.routes.draw do
+  
+  post "add_article_to_order/article/:article_id/order/:order_id" => "articles#add_article_to_order", :as => :crear_articulos_orden
   resources :order_statuses
 
   resources :departments

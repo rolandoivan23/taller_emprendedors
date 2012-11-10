@@ -43,7 +43,7 @@
     <td><%= link_to 'Ver detalles', article %></td>
     <td><%= link_to 'Editar', edit_article_path(article) %></td>
     <td><%= link_to 'Eliminar', article, confirm: 'Esta seguro?', method: :delete %></td>
-    <td id="cantidad_articulo_<%= article.id %>" class="cantidad"> <label>Cantidad:</label><input type="number" style="width: 20px;" /><div><%= link_to "Agregar", crear_articulos_orden_url(), :method => :post %> <label onclick="ocultar_div_cantidad(<%= article.id%>);">Ocultar</label></div></dir></td>
+    <td id="cantidad_articulo_<%= article.id %>" class="cantidad"> <label>Cantidad:</label><input type="number" style="width: 20px;" /><div><%= link_to "Agregar", crear_articulos_orden_url(article.id,1), :method => :post, :remote => true, :format => :js	 %> <label onclick="ocultar_div_cantidad(<%= article.id%>);">Ocultar</label></div></dir></td>
  	<td id="agregar_articulo_<%= article.id %>"><label href="#" onclick="mostrar_div_cantidad(<%= article.id %>);">Agregar</label></td>
   </tr>
 <% end %>

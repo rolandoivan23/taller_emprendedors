@@ -20,6 +20,13 @@ class ArticlesController < ApplicationController
       format.json { render json: @article }
     end
   end
+  
+  def add_article_to_order
+    
+    respond_to do |format|
+      format.js
+    end
+  end
 
   # GET /articles/new
   # GET /articles/new.json

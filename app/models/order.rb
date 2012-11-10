@@ -3,5 +3,5 @@ class Order < ActiveRecord::Base
   belongs_to :client
   belongs_to :order_status
   belongs_to :payment_status
-  has_many_and_belongs_to :articles
+  has_and_belongs_to_many :articles
 end
