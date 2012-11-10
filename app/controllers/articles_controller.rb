@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   end
   
   def add_article_to_order
-    
+    ArticlesOrder.create(:article_id => params[:article_id], :order_id => 1, :cantidad => 2)
     respond_to do |format|
       format.js
     end
