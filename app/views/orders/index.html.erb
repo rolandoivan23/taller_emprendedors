@@ -1,12 +1,12 @@
 <h1>Lista de ordenes</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Cliente</th>
     <th>Estatus</th>
     <th>Monto total</th>
     <th>Fecha de entrega</th>
-    <th>Payment status</th>
+    <th>Estatus del pago</th>
     <th>Fecha de liberacion</th>
     <th></th>
     <th></th>
@@ -21,9 +21,9 @@
     <td><%= order.fecha_entrega %></td>
     <td><%= order.payment_status_id %></td>
     <td><%= order.fecha_liberacion_pedido %></td>
-    <td><%= link_to 'Show', order %></td>
-    <td><%= link_to 'Edit', edit_order_path(order) %></td>
-    <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Ver detalles', order %></td>
+    <td><%= link_to 'Editar', edit_order_path(order) %></td>
+    <td><%= link_to 'Eliminar', order, confirm: 'Esta seguro?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

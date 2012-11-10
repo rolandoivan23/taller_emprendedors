@@ -36,6 +36,6 @@
     <%= f.date_select :fecha_liberacion_pedido %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit params[:action] == "edit" ? "Actualizar Orden" : "Crear Orden" %>
   </div>
 <% end %>

@@ -22,11 +22,11 @@
   </div>
   <div class="field">
     <%= f.label :department_id %><br />
-    <%= f.number_field :department_id %>
+    <%= f.collection_select(:department_id, Department.all, :id, :nombre) %>
   </div>
   <div class="field">
     <%= f.label :retail_unit_id %><br />
-    <%= f.number_field :retail_unit_id %>
+    <%= f.collection_select(:retail_unit_id, RetailUnit.all, :id, :nombre) %>
   </div>
   <div class="field">
     <%= f.label :precio_por_unidad_de_venta %><br />

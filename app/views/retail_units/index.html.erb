@@ -1,6 +1,6 @@
-<h1>Listing retail_units</h1>
+<h1>Lista de unidades</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Nombre</th>
     <th>Descripcion</th>
@@ -15,9 +15,9 @@
     <td><%= retail_unit.nombre %></td>
     <td><%= retail_unit.descripcion %></td>
     <td><%= retail_unit.tipo %></td>
-    <td><%= link_to 'Show', retail_unit %></td>
-    <td><%= link_to 'Edit', edit_retail_unit_path(retail_unit) %></td>
-    <td><%= link_to 'Destroy', retail_unit, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Ver detalles', retail_unit %></td>
+    <td><%= link_to 'Editar', edit_retail_unit_path(retail_unit) %></td>
+    <td><%= link_to 'Eliminar', retail_unit, confirm: 'Esta seguro?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

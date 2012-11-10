@@ -24,6 +24,6 @@
     <%= f.text_field :tipo %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit params[:action] == "edit" ? "Actualizar Departamento" : "Crear Departamento" %>
   </div>
 <% end %>
