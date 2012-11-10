@@ -1,9 +1,22 @@
+<script>
+	
+
+    $(document).ready(function() {
+        $(".cantidad").hide();
+    });
+
+	function mostrar_div_cantidad(article_id){
+		$("#cantidad_articulo_" + article_id).show();
+		$("#agregar_articulo_" + article_id).hide();
+	}
+
+</script>
 <h1>Lista de articulos</h1>
 
 <table class="table">
   <tr>
     <th>Nombre</th>
-    <th>Marca</th>
+    
     <th>Departamento</th>
     <th>Unidad</th>
     <th>Precio </th>
@@ -15,15 +28,18 @@
 
 <% @articles.each do |article| %>
   <tr>
+  	
     <td><%= article.nombre %></td>
-    <td><%= article.marca %></td>
     <td><%= article.department_id %></td>
     <td><%= article.retail_unit_id %></td>
+    
     <td><%= article.precio_por_unidad_de_venta %></td>
     <td><%= article.stock %></td>
     <td><%= link_to 'Ver detalles', article %></td>
     <td><%= link_to 'Editar', edit_article_path(article) %></td>
     <td><%= link_to 'Eliminar', article, confirm: 'Esta seguro?', method: :delete %></td>
+    <td id="cantidad_articulo_<%= article.id %>" class="cantidad"> <label>Cantidad:</label><input type="number" style="width: 20px;" /></td>
+ 	<td id="agregar_articulo_<%= article.id %>"><label href="#" onclick="mostrar_div_cantidad(<%= article.id %>);">Agregar</label></td>
   </tr>
 <% end %>
 </table>
