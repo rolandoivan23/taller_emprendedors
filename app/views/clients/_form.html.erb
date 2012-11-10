@@ -1,0 +1,53 @@
+<%= form_for(@client) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% @client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido_paterno %><br />
+    <%= f.text_field :apellido_paterno %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido_materno %><br />
+    <%= f.text_field :apellido_materno %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :calle %><br />
+    <%= f.text_field :calle %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_exterior %><br />
+    <%= f.number_field :numero_exterior %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_interior %><br />
+    <%= f.number_field :numero_interior %>
+  </div>
+  <div class="field">
+    <%= f.label :ciudad_id %><br />
+    <%= f.number_field :ciudad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_id %><br />
+    <%= f.number_field :estado_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

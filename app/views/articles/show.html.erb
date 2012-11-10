@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @article.nombre %>
+</p>
+
+<p>
+  <b>Marca:</b>
+  <%= @article.marca %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @article.department_id %>
+</p>
+
+<p>
+  <b>Retail unit:</b>
+  <%= @article.retail_unit_id %>
+</p>
+
+<p>
+  <b>Precio por unidad de venta:</b>
+  <%= @article.precio_por_unidad_de_venta %>
+</p>
+
+<p>
+  <b>Stock:</b>
+  <%= @article.stock %>
+</p>
+
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

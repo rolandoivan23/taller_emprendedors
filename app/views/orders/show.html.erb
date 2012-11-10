@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Client:</b>
+  <%= @order.client_id %>
+</p>
+
+<p>
+  <b>Order status:</b>
+  <%= @order.order_status_id %>
+</p>
+
+<p>
+  <b>Monto total:</b>
+  <%= @order.monto_total %>
+</p>
+
+<p>
+  <b>Fecha entrega:</b>
+  <%= @order.fecha_entrega %>
+</p>
+
+<p>
+  <b>Payment status:</b>
+  <%= @order.payment_status_id %>
+</p>
+
+<p>
+  <b>Fecha liberacion pedido:</b>
+  <%= @order.fecha_liberacion_pedido %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

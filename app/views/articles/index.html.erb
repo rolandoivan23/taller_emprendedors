@@ -1,0 +1,33 @@
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Marca</th>
+    <th>Department</th>
+    <th>Retail unit</th>
+    <th>Precio por unidad de venta</th>
+    <th>Stock</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.nombre %></td>
+    <td><%= article.marca %></td>
+    <td><%= article.department_id %></td>
+    <td><%= article.retail_unit_id %></td>
+    <td><%= article.precio_por_unidad_de_venta %></td>
+    <td><%= article.stock %></td>
+    <td><%= link_to 'Show', article %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Article', new_article_path %>
